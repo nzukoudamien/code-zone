@@ -25,20 +25,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install System Dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-tk tk-dev libx11-dev
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools wheel
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip install pyinstaller customtkinter
+          pip install pyinstaller customtkinter pillow
 
       - name: Build Executable with PyInstaller
         run: |
-          pyinstaller --noconfirm --onedir --windowed --name "${{ matrix.asset_name }}" main.py
+          pyinstaller --noconfirm --onedir --windowed --collect-all customtkinter --name "${{ matrix.asset_name }}" main.py
 
       - name: Compress Build Output (.tar.gz)
         run: |
