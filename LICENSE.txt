@@ -1,0 +1,68 @@
+===============================================================================
+                       CODE ZONE PUBLIC & COMMERCIAL LICENSE
+                                Version 1.0 (2026)
+===============================================================================
+
+Copyright (c) 2026 NZUKOU FEZEU DAMIEN FLORIAN. All Rights Reserved.
+
+1. INTENT & PURPOSE
+-------------------
+CODE ZONE is created, maintained, and owned exclusively by NZUKOU FEZEU DAMIEN 
+FLORIAN. This license is structured to encourage individual exploration, 
+academic study, and community growth while protecting the commercial value 
+and core intellectual property of the project.
+
+2. PERMITTED USES (FREE & OPEN COMMUNITY ACCESS)
+------------------------------------------------
+Permission is hereby granted, free of charge, to any natural person to:
+  a) Download, install, and execute the binaries or source code for personal, 
+     educational, and non-commercial development purposes.
+  b) Inspect, study, and modify the source code for personal use.
+  c) Submit contributions, bug reports, and enhancements directly to the 
+     official repository owned by NZUKOU FEZEU DAMIEN FLORIAN.
+
+3. RESTRICTIONS & PROHIBITED ACTIONS
+------------------------------------
+Without explicit prior written permission from NZUKOU FEZEU DAMIEN FLORIAN:
+  a) COMMERCIAL REDISTRIBUTION: You may not sell, rent, lease, or sub-license 
+     CODE ZONE, in whole or in part, as a standalone product or as part of a 
+     commercial software package.
+  b) BRANDING & TRADEMARK: You may not remove, obscure, or alter any copyright 
+     notices, logo assets, or author attributions within the application UI 
+     or source files.
+  c) PROPRIETARY FORKING: You may not create closed-source commercial forks of 
+     this codebase.
+
+4. SPONSORSHIP & COMMERCIAL LICENSING
+-------------------------------------
+Commercial entities, enterprise environments, or organizations wishing to:
+  - Integrate CODE ZONE into commercial workflows or proprietary toolchains,
+  - Sponsor the ongoing development of the project,
+  - Obtain custom branding, white-label versions, or dedicated support,
+
+must obtain a Commercial License or active Corporate Sponsorship Agreement 
+directly from the author.
+
+To inquire about corporate sponsorship tiers, official backing, or enterprise 
+licensing, please contact:
+
+  Author  : NZUKOU FEZEU DAMIEN FLORIAN
+  Project : CODE ZONE — Next-Gen IDE & Ecosystem
+  Contact : [Ton Adresse Email / Lien GitHub]
+
+5. CONTRIBUTIONS
+----------------
+Any code, documentation, or assets contributed to this repository become part 
+of the official project under the stewardship of NZUKOU FEZEU DAMIEN FLORIAN, 
+who retains master rights to relicensing and commercial distribution.
+
+6. DISCLAIMER OF WARRANTY
+-------------------------
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY.
+
+===============================================================================
+               DESIGNED & DEVELOPED BY NZUKOU FEZEU DAMIEN FLORIAN
+===============================================================================

@@ -1,0 +1,4 @@
+echo "build/" > .gitignore
+echo "dist/" >> .gitignore
+echo "*.spec" >> .gitignore
+echo "__pycache__/" >> .gitignore

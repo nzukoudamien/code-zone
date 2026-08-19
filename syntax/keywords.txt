@@ -1,0 +1,44 @@
+# KUROKO
+kuroko import from as class def return if else elif while for in break continue try except raise yield lambda pass async await True False None self super construct format print type len range clock exit
+
+# PYTHON
+import from as class def return if else elif while for in break continue try except finally raise yield lambda pass async await global nonlocal assert True False None self cls print len range list dict set tuple int float str bool bytearray memoryview bytes input open enumerate zip map filter any all sum min max abs isinstance issubclass type super dir vars getattr setattr hasattr
+
+# C / C++
+include define undef ifdef ifndef endif line error pragma void int char float double long short struct enum typedef union const static volatile register auto extern inline restrict sizeof return if else switch case default while for do break continue goto alignas alignof constexpr decltype static_assert thread_local NULL true false std vector string map set cout cin printf scanf malloc free
+
+# RUST
+fn let mut const static struct enum trait impl type mod use crate pub super self Self return if else match loop while for in break continue async await yield move unsafe ref dyn where true false None Some Ok Err String str u8 u16 u32 u64 u128 i8 i16 i32 i64 i128 f32 f64 bool char Vec Box Option Result println format
+
+# ZIG
+fn const var threadlocal comptime pub align packed enum union struct error break continue defer errdefer return if else switch while for unreachable try catch payload test void bool i8 u8 i16 u16 i32 u32 i64 u64 i128 u128 f16 f32 f64 f128 isize usize true false null undefined @import @embedFile @cImport @cInclude
+
+# ODIN
+package import foreign proc struct enum union bit_set map dynamic return if else matrix when switch case fallthrough for in defer context using nil true false b8 b16 b32 b64 byte int i8 i16 i32 i64 i128 uint u8 u16 u32 u64 u128 f16 f32 f64 rawptr string cstring transmute cast fmt len cap delete append make
+
+# GO
+func type struct interface package import return var const if else switch case default fallthrough for range break continue map chan go select defer nil true false make new len cap append copy panic recover fmt Println Printf Sprintf
+
+# RUBY
+def class module require require_relative import return if elsif else unless while until for in do end yield break next rescue ensure retry redo self nil true false puts print attr_accessor attr_reader attr_writer raise catch throw
+
+# LUA
+function local return if then else elseif end while do repeat until for in break nil true false print pairs ipairs require type tostring tonumber pcall xpcall table string math io os
+
+# RED / REBOL
+red rebol needs context make block word string integer float logic char tuple pair time date path unset file url email image def function func does has routine return if either switch loop repeat while until forall foreach break continue exit true false none print prin
+
+# BEEF
+namespace using class struct enum union interface extension function mixin let var const static mut volatile return if else switch case default while do for foreach break continue yield try catch finally throw new delete null true false void bool char int uint float double String
+
+# ASSEMBLY (x86_64)
+mov push pop add sub mul div imul idiv inc dec lea jmp je jne jg jge jl jle call ret cmp test nop xor or and shl shr pushfq popfq syscall int section global extern data text bss db dw dd dq
+
+# CRYSTAL
+def class module struct enum alias include extend require return if elsif else unless while until for in do end yield break next rescue ensure nil true false self puts p getter setter property
+
+# NIM
+proc func method converter macro template type var let const import export return if elif else while for in block break continue case of discarding nil true false echo result system seq array string int float bool discard addr cast ptr ref concept static defer
+
+# JAVASCRIPT / TYPESCRIPT
+import export default from as class function const let var return if else switch case default while do for in of break continue try catch finally throw async await yield new this super null undefined true false NaN Infinity console log type interface enum namespace implements extends private public protected readonly
