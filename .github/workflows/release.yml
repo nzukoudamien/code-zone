@@ -17,15 +17,12 @@ jobs:
           - os: ubuntu-latest
             asset_name: codezone-linux-x64
             artifact_name: codezone-linux
-            archive_ext: tar.gz
           - os: macos-latest
             asset_name: codezone-macos-x64
             artifact_name: codezone-macos
-            archive_ext: tar.gz
           - os: windows-latest
             asset_name: codezone-windows-x64
             artifact_name: codezone-windows
-            archive_ext: zip
 
     steps:
       - name: Checkout repository
@@ -43,25 +40,30 @@ jobs:
           python-version: '3.11'
 
       - name: Install Python dependencies
+        shell: bash
         run: |
           python -m pip install --upgrade pip setuptools wheel
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           pip install pyinstaller customtkinter Pillow
 
       - name: Build Executable with PyInstaller
+        shell: bash
         run: |
           pyinstaller --noconfirm --onedir --windowed --collect-all customtkinter --name "${{ matrix.asset_name }}" main.py
 
       - name: Compress Build Output (Linux / macOS)
         if: runner.os != 'Windows'
+        shell: bash
         run: |
           cd dist
           tar -czvf ../${{ matrix.asset_name }}.tar.gz ${{ matrix.asset_name }}
 
       - name: Compress Build Output (Windows)
         if: runner.os == 'Windows'
+        shell: bash
         run: |
-          Compress-Archive -Path "dist/${{ matrix.asset_name }}" -DestinationPath "${{ matrix.asset_name }}.zip"
+          cd dist
+          tar -czvf ../${{ matrix.asset_name }}.zip ${{ matrix.asset_name }}
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
