@@ -25,11 +25,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install System Dependencies (Linux)
+      - name: Install System Tk (Linux)
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-tk tk-dev libx11-dev
+          sudo apt-get install -y python3-tk tk-dev
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -40,7 +40,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools wheel
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-          pip install pyinstaller customtkinter pillow
+          pip install pyinstaller customtkinter Pillow
 
       - name: Build Executable with PyInstaller
         run: |
