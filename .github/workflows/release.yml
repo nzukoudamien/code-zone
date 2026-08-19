@@ -17,9 +17,15 @@ jobs:
           - os: ubuntu-latest
             asset_name: codezone-linux-x64
             artifact_name: codezone-linux
+            archive_ext: tar.gz
           - os: macos-latest
             asset_name: codezone-macos-x64
             artifact_name: codezone-macos
+            archive_ext: tar.gz
+          - os: windows-latest
+            asset_name: codezone-windows-x64
+            artifact_name: codezone-windows
+            archive_ext: zip
 
     steps:
       - name: Checkout repository
@@ -46,16 +52,22 @@ jobs:
         run: |
           pyinstaller --noconfirm --onedir --windowed --collect-all customtkinter --name "${{ matrix.asset_name }}" main.py
 
-      - name: Compress Build Output (.tar.gz)
+      - name: Compress Build Output (Linux / macOS)
+        if: runner.os != 'Windows'
         run: |
           cd dist
           tar -czvf ../${{ matrix.asset_name }}.tar.gz ${{ matrix.asset_name }}
+
+      - name: Compress Build Output (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          Compress-Archive -Path "dist/${{ matrix.asset_name }}" -DestinationPath "${{ matrix.asset_name }}.zip"
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact_name }}
-          path: codezone-*.tar.gz
+          path: codezone-*.*
 
   release:
     name: Create GitHub Release
@@ -75,7 +87,7 @@ jobs:
       - name: Organize assets
         run: |
           mkdir -p ./release-assets
-          find ./artifacts -type f -name "*.tar.gz" -exec cp {} ./release-assets/ \;
+          find ./artifacts -type f \( -name "*.tar.gz" -o -name "*.zip" \) -exec cp {} ./release-assets/ \;
 
       - name: Publish Release
         uses: softprops/action-gh-release@v2
