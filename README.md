@@ -32,7 +32,7 @@ Before running CODE ZONE, ensure you have **Python 3.8+** installed along with t
 
 ### 1. Clone or Download the Repository
 ```bash
-git clone [https://github.com/your-username/code-zone.git](https://github.com/your-username/code-zone.git)
+git clone [https://github.com/damixlord2-0/code-zone.git](https://github.com/damixlord2-0/code-zonecode.git)
 cd code-zone
 ```
 
